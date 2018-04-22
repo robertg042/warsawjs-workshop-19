@@ -78,3 +78,31 @@ section {
     width: 100%;
 }
 
+h2 {
+    font-size: 3rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.arrow {
+    height: 15px;
+    width: 15px;
+    border-top: black 1px solid;
+    border-left: black 1px solid;
+}
+
+.arrow-left {
+    margin-right: 10px;
+    align-self: center;
+    transform: rotate(-45deg);
+}
+
+.arrow-right {
+    margin-left: 10px;
+    align-self: center;
+    transform: rotate(135deg);
+ }
+
+.gallery {
+    display: flex;
+}
