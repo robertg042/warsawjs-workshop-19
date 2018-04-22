@@ -1,16 +1,19 @@
 :root {
     --text-color: white;
     --dark-blue: #0015FF;
-    --light-blue: #426DE8;
+    /*--light-blue: #426DE8;*/
+    --light-blue: #3041FF;
+    --background-color: #68BCFF;
 }
 
 body {
-    background-color: #68BCFF;
+    background-color: var(--background-color);
 }
+
 
 .navigation {
     display: flex;
-    padding: 0 2rem;
+    padding: 0;
     background-color: var(--dark-blue);
 }
 
@@ -18,18 +21,28 @@ body {
     margin: 0 0 0 auto;
 }
 
-.navigation a:link, a:visited {
+nav button {
     background-color: var(--dark-blue);
     color: white;
     padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    border: var(--dark-blue) 1px solid;
+    /*border: none;*/
+    cursor: pointer;
+    outline: none;
 }
 
-.navigation a:hover, a:active {
+nav button:focus {
+    outline: none;
+}
+
+nav button:hover {
     background-color: var(--light-blue);
 }
+
+.active-button {
+    background-color: var(--light-blue);
+}
+
 
 section {
     display: none;
@@ -43,9 +56,25 @@ section {
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 30px;
     line-height: 30px;
     width: 100%;
     background: var(--dark-blue);
     color: var(--text-color);
 }
+
+.nav-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.vertically-centered {
+    margin: auto;
+    padding-right: 0;
+}
+
+.vertically-centered button {
+    display: block;
+    width: 100%;
+}
+

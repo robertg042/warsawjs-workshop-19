@@ -6,30 +6,60 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./main.css">
     <title>AboutMe</title>
 </head>
 <body onload="setActiveOnFirstElement()">
     <header class="header">
         <nav class="navigation">
-            <a id="home-section-link" href="#home-section" data-id="home-section" onclick="showSection(event)">Home</a>
+            <button class="nav-button home-section-link" data-id="home-section" onclick="showSection(event)">Home</button>
             <span class="nav-right">
-                <a id="projects-section-link" href="#projects-section" data-id="projects-section" onclick="showSection(event)">Projects</a>
-                <a id="gallery-section-link" href="#gallery-section" data-id="gallery-section" onclick="showSection(event)">Gallery</a>
-                <a id="fun-section-link" href="#fun-section" data-id="fun-section" onclick="showSection(event)">Fun Stuff</a>
-                <a id="contact-section-link" href="#contact-section" data-id="contact-section" onclick="showSection(event)">Contact</a>
+                <button class="nav-button projects-section-link" data-id="projects-section" onclick="showSection(event)">Projects</button>
+                <button class="nav-button gallery-section-link" data-id="gallery-section" onclick="showSection(event)">Gallery</button>
+                <button class="nav-button experience-section-link" data-id="experience-section" onclick="showSection(event)">Experience</button>
+                <button class="nav-button contact-section-link" data-id="contact-section" onclick="showSection(event)">Contact</button>
             </span>
         </nav>
     </header>
-    <main class="main">
-        <button class="btn btn-dark" onclick="hideSections()">Test</button>
-        <section id="home-section" class="">Home section</section>
-        <section id="projects-section">Projects section</section>
-        <section id="gallery-section">Gallery section</section>
-        <section id="fun-section">Fun stuff</section>
-        <section id="contact-section">Contact info</section>
+
+    <main class="main container-fluid">
+        <div class="row">
+            <div class="col">
+                <section id="home-section">Home section</section>
+                <section id="projects-section">Projects section</section>
+                <section id="gallery-section">
+                    <div class="row">
+                        <div class="col">
+                            <h2>
+                                Gallery
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+                <section id="experience-section">Experience section</section>
+                <section id="contact-section">Contact info</section>
+            </div>
+        </div>
     </main>
-    <footer class="footer">Footer</footer>
+    <footer class="footer">
+        <!--<div class="container-fluid">-->
+            <nav class="row">
+                <div class="col-2 vertically-centered">
+                    <button class="nav-button home-section-link" data-id="home-section" onclick="showSection(event)"><i class="fa fa-3x fa-home"></i></button>
+                </div>
+                <div class="col-8 nav-footer">
+                    <button class="nav-button projects-section-link" data-id="projects-section" onclick="showSection(event)"><i class="fa fa-folder-open"></i> Projects</button>
+                    <button class="nav-button gallery-section-link" data-id="gallery-section" onclick="showSection(event)"><i class="fa fa-image"></i> Gallery</button>
+                    <button class="nav-button experience-section-link" data-id="experience-section" onclick="showSection(event)"><i class="fa fa-briefcase"></i> Experience</button>
+                    <button class="nav-button contact-section-link" data-id="contact-section" onclick="showSection(event)"><i class="fa fa-address-card"></i> Contact</button>
+                </div>
+                <div class="col-2 vertically-centered">
+                    <i class="fa fa-copyright"></i>  2018 Robert Górnicki & WarsawJS
+                </div>
+            </nav>
+        <!--</div>-->
+    </footer>
 
     <script src="index.js"></script>
 </body>
