@@ -7,7 +7,10 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color);
+    min-height: 100vh;
 }
 
 
@@ -53,9 +56,10 @@ section {
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    margin-top: auto;
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
     line-height: 30px;
     width: 100%;
     background: var(--dark-blue);
@@ -85,24 +89,33 @@ h2 {
 }
 
 .arrow {
+    position: absolute;
     height: 15px;
     width: 15px;
     border-top: black 1px solid;
     border-left: black 1px solid;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow:hover {
+    opacity: 0.5;
 }
 
 .arrow-left {
-    margin-right: 10px;
+    left: -50px;
     align-self: center;
     transform: rotate(-45deg);
 }
 
 .arrow-right {
-    margin-left: 10px;
+    right: -50px;
     align-self: center;
     transform: rotate(135deg);
  }
 
 .gallery {
     display: flex;
+    position: relative;
+    margin-bottom: 1rem;
 }

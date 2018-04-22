@@ -39,9 +39,9 @@
                     <div class="row">
                         <div class="col-4"></div>
                         <div class="col-4 gallery">
-                            <div class="arrow arrow-left"></div>
-                            <img class="img-fluid" src="./images/cat1.jpg" alt="Cat photo">
-                            <div class="arrow arrow-right"></div>
+                            <div class="arrow arrow-left" onclick="changeImage(event)" data-direction="left"></div>
+                            <img id="image" class="img-fluid" src="./images/cat1.jpg" alt="Cat photo">
+                            <div class="arrow arrow-right" onclick="changeImage(event)" data-direction="right"></div>
                         </div>
                         <div class="col-4"></div>
                     </div>
@@ -52,22 +52,20 @@
         </div>
     </main>
     <footer class="footer">
-        <!--<div class="container-fluid">-->
-            <nav class="row">
-                <div class="col-2 vertically-centered">
-                    <button class="nav-button home-section-link" data-id="home-section" onclick="showSection(event)"><i class="fa fa-3x fa-home"></i></button>
-                </div>
-                <div class="col-8 nav-footer">
-                    <button class="nav-button projects-section-link" data-id="projects-section" onclick="showSection(event)"><i class="fa fa-folder-open"></i> Projects</button>
-                    <button class="nav-button gallery-section-link" data-id="gallery-section" onclick="showSection(event)"><i class="fa fa-image"></i> Gallery</button>
-                    <button class="nav-button experience-section-link" data-id="experience-section" onclick="showSection(event)"><i class="fa fa-briefcase"></i> Experience</button>
-                    <button class="nav-button contact-section-link" data-id="contact-section" onclick="showSection(event)"><i class="fa fa-address-card"></i> Contact</button>
-                </div>
-                <div class="col-2 vertically-centered">
-                    <i class="fa fa-copyright"></i>  2018 Robert Górnicki & WarsawJS
-                </div>
-            </nav>
-        <!--</div>-->
+        <nav class="row">
+            <div class="col-2 vertically-centered">
+                <button class="nav-button home-section-link" data-id="home-section" onclick="showSection(event)"><i class="fa fa-3x fa-home"></i></button>
+            </div>
+            <div class="col-8 nav-footer">
+                <button class="nav-button projects-section-link" data-id="projects-section" onclick="showSection(event)"><i class="fa fa-folder-open"></i> Projects</button>
+                <button class="nav-button gallery-section-link" data-id="gallery-section" onclick="showSection(event)"><i class="fa fa-image"></i> Gallery</button>
+                <button class="nav-button experience-section-link" data-id="experience-section" onclick="showSection(event)"><i class="fa fa-briefcase"></i> Experience</button>
+                <button class="nav-button contact-section-link" data-id="contact-section" onclick="showSection(event)"><i class="fa fa-address-card"></i> Contact</button>
+            </div>
+            <div class="col-2 vertically-centered">
+                <i class="fa fa-copyright"></i>  2018 Robert Górnicki & WarsawJS
+            </div>
+        </nav>
     </footer>
 
     <script src="index.js"></script>
