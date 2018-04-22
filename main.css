@@ -1,0 +1,51 @@
+:root {
+    --text-color: white;
+    --dark-blue: #0015FF;
+    --light-blue: #426DE8;
+}
+
+body {
+    background-color: #68BCFF;
+}
+
+.navigation {
+    display: flex;
+    padding: 0 2rem;
+    background-color: var(--dark-blue);
+}
+
+.nav-right {
+    margin: 0 0 0 auto;
+}
+
+.navigation a:link, a:visited {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.navigation a:hover, a:active {
+    background-color: var(--light-blue);
+}
+
+section {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    background: var(--dark-blue);
+    color: var(--text-color);
+}

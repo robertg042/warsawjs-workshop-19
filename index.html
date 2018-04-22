@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <title>AboutMe</title>
+</head>
+<body onload="setActiveOnFirstElement()">
+    <header class="header">
+        <nav class="navigation">
+            <a id="home-section-link" href="#home-section" data-id="home-section" onclick="showSection(event)">Home</a>
+            <span class="nav-right">
+                <a id="projects-section-link" href="#projects-section" data-id="projects-section" onclick="showSection(event)">Projects</a>
+                <a id="gallery-section-link" href="#gallery-section" data-id="gallery-section" onclick="showSection(event)">Gallery</a>
+                <a id="fun-section-link" href="#fun-section" data-id="fun-section" onclick="showSection(event)">Fun Stuff</a>
+                <a id="contact-section-link" href="#contact-section" data-id="contact-section" onclick="showSection(event)">Contact</a>
+            </span>
+        </nav>
+    </header>
+    <main class="main">
+        <button class="btn btn-dark" onclick="hideSections()">Test</button>
+        <section id="home-section" class="">Home section</section>
+        <section id="projects-section">Projects section</section>
+        <section id="gallery-section">Gallery section</section>
+        <section id="fun-section">Fun stuff</section>
+        <section id="contact-section">Contact info</section>
+    </main>
+    <footer class="footer">Footer</footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
